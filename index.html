@@ -87,21 +87,18 @@
     </section>
   </main>
 
+  <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
   <script>
-    let form = document.querySelector('form');
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      let output = document.querySelector('output');
-      let firstNum = document.querySelector('#first-num').value;
-      let secondNum = document.querySelector('#second-num').value;
-      let operator = document.querySelector('#operator').value;
-      output.innerHTML = eval(`${firstNum} ${operator} ${secondNum}`);
+    window.TrackJS && TrackJS.install({ 
+      token: "5eb13f74eb3f4753a89d90f838bea0e4"
+      // for more configuration options, see https://docs.trackjs.com
     });
+  </script>
+                        
 
-    let errorBtns = Array.from(document.querySelectorAll('#error-btns > button'));
-
+  <script src="scripts.js">    
     // Start your code here
-    // You may move this JS to another file if you wish
+    // Moved the script to scripts.js
   </script>
 </body>
 
